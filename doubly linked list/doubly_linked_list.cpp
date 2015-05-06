@@ -62,14 +62,14 @@ using namespace std;
     if(p->next != NULL) {
       free_recursively(p->next);
     }
-    free(p);
+    delete(p);
   }
 
   void delete_list(Root *k) {
     if(k->first != NULL && k->first->next != NULL) {
       free_recursively(k->first->next);
     }
-    free(k);
+    delete(k);
   }
 
 int main(void)
